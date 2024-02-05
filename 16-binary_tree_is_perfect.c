@@ -21,6 +21,9 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 	is_perfect = 1;
 	node_depth = 0;
 
+	if (tree == NULL)
+		return (0);
+
 	perfect_(tree, to_perfect, even_depth);
 	return (is_perfect);
 }
