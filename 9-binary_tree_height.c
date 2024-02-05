@@ -37,7 +37,7 @@ void height(const binary_tree_t *node, size_t *height_no, const binary_tree_t
 	if (node == NULL)
 		return;
 	height(node->left, height_no, root);
-	if (binary_tree_is_leaf(node) == 1 && binary_tree_relative_depth(node,
+	if (binary_tree_is_my_leaf(node) == 1 && binary_tree_relative_depth(node,
 		root) > *height_no)
 	{
 		*height_no = binary_tree_relative_depth(node, root);
@@ -73,5 +73,22 @@ const binary_tree_t *root)
 		depth++;
 	}
 	return (depth);
+}
+
+/**
+ * binary_tree_is_my_leaf - checks if a node is a leaf
+ * @node: node to be checked
+ * Description - shecks a node to see if it is a leaf
+ * Return: 1, if leaf, 0, if otherwise.
+*/
+
+int binary_tree_is_my_leaf(const binary_tree_t *node)
+{
+	if (node == NULL)
+		return (0);
+	if ((node->left == NULL) && (node->right == NULL))
+		return (1);
+	else
+		return (0);
 }
 

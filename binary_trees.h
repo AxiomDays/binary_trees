@@ -54,5 +54,6 @@ void height(const binary_tree_t *node, size_t *height_no, const binary_tree_t
 *root);
 size_t binary_tree_relative_depth(const binary_tree_t *tree, const binary_tree_t
 *root);
+int binary_tree_is_my_leaf(const binary_tree_t *node);
 
 #endif
