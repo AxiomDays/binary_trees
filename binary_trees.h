@@ -48,12 +48,15 @@ size_t binary_tree_size(const binary_tree_t *tree);
 size_t binary_tree_nodes(const binary_tree_t *tree);
 void node_(const binary_tree_t *node, size_t *node_no);
 int binary_tree_is_perfect(const binary_tree_t *tree);
-void perfect_(const binary_tree_t *node, size_t *to_perfect);
 size_t binary_tree_height(const binary_tree_t *tree);
 void height(const binary_tree_t *node, size_t *height_no, const binary_tree_t
 *root);
 size_t binary_tree_relative_depth(const binary_tree_t *tree, const binary_tree_t
 *root);
 int binary_tree_is_my_leaf(const binary_tree_t *node);
+int binary_tree_is_perfect_leaf(const binary_tree_t *node);
+size_t binary_tree_perfect_depth(const binary_tree_t *tree);
+void perfect_(const binary_tree_t *node, size_t *to_perfect, size_t
+*even_depth);
 
 #endif
