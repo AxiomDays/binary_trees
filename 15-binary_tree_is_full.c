@@ -18,6 +18,9 @@ size_t binary_tree_is_full(const binary_tree_t *tree)
 	full_ptr = &is_full;
 	is_full = 1;
 
+	if (tree == NULL)
+		return (0);
+
 	full(tree, full_ptr);
 	return (is_full);
 }
