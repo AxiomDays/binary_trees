@@ -58,5 +58,7 @@ int binary_tree_is_perfect_leaf(const binary_tree_t *node);
 size_t binary_tree_perfect_depth(const binary_tree_t *tree);
 void perfect_(const binary_tree_t *node, size_t *to_perfect, size_t
 *even_depth);
+void full(const binary_tree_t *node, size_t *full_ptr);
+size_t binary_tree_is_full(const binary_tree_t *tree);
 
 #endif
